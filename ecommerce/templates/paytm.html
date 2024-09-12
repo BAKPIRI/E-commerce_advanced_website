@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>PayTm Merchant Payment Page</title>
+  <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
+</head>
+<body>
+  <h1>Redirecting you to the merchant...</h1>
+  <h1>{{customer.lastname}}</h1>
+  <h1>{{ key.public_key }}</h1>
+
+  <button id="pay-btn">Pay the order</button>
+  
+  <script type="text/javascript">
+    FedaPay.init('#pay-btn', { 
+      public_key :"pk_sandbox_6sxmfsHoMqEfMeFIkGHdZcF_"
+      ,
+      transaction: {
+        amount: {{ amount }} ,
+        description: "Acheter nos produits"
+      },
+      customer: {
+        email : "{{ customer.mail }}",
+        lastname : "{{customer.lastname}}",
+        firstname : "{{customer.firstname }}",
+      }
+    });
+  </script>
+</body>
+</html>

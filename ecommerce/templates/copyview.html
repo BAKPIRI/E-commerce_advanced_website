@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>
+      PayTm merchant payement page
+    </title>
+    
+  <body>
+    <h1>Redirection you to the merchant...</h1>
+    <h1>Please do not refresh your page...</h1>
+    <h1>Please do not refresh your page...</h1>
+    <h1>Please do not refresh your page...</h1>
+<form action="https://paygateglobal.com/v1/page?"
+  
+   method="post" name="paytm">
+   {% for key ,value in param_dict.items %}
+   <input type="hidden" name="{{key}}" value="{{value}}">
+   {% endfor %}
+  </form>
+</body>
+<script>
+  document.paytm.submit()
+</script>
+    </html>
