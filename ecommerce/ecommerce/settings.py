@@ -29,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-PAYPAL_TEST = True
 
 
 # Application definition
@@ -43,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ecommerceapp',
     'authcart',
-     'paypal.standard.ipn',
     
 ]
 
